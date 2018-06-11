@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+import axios from 'axios';
+
 import Pet from './Pet';
 import NewPetForm from './NewPetForm';
 
@@ -9,13 +12,32 @@ class PetCollection extends Component {
     super(props);
 
     this.state = {
-      petList: props.petList,
+      pets: [],
     }
+  }
+
+  componentDidMount = () => {
+    console.log('Component did mount was called');
+
+    axios.get('https://petdibs.herokuapp.com/pets/')
+      .then( (response) => {
+        console.log( response.data );
+        this.setState({
+          pets: response.data
+        });
+      } )
+      .catch( (error) => {
+        console.log("got to the error");
+        console.log(error);
+        this.setState({
+          error: error.message
+        });
+      } );
   }
 
   renderPetList = () => {
     console.log('Rendering Pet List');
-    const componentList = this.state.petList.map((pet, index) => {
+    const componentList = this.state.pets.map((pet, index) => {
       return (
         <Pet
           key={index}
@@ -31,7 +53,7 @@ class PetCollection extends Component {
   }
 
   addPet = (pet) => {
-    const petList = this.state.petList;
+    const petList = this.state.pets;
 
     petList.push(pet);
     this.setState({
@@ -51,7 +73,6 @@ class PetCollection extends Component {
 }
 
 PetCollection.propTypes = {
-  petList: PropTypes.array.isRequired,
 }
 
 
