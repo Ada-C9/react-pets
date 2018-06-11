@@ -17,6 +17,13 @@ class PetCollection extends Component {
     };
   }
 
+  addPet = (pet) => {
+    let updatedPets = this.state.pets;
+    updatedPets.push(pet);
+
+    this.setState({ pets: updatedPets });
+  }
+
   render() {
     const pets = this.state.pets.map((pet, index) => {
       return <Pet key={index}
@@ -39,6 +46,8 @@ class PetCollection extends Component {
             { pets }
           </tbody>
         </table>
+
+        <NewPetForm addPetCallback={this.addPet}/>
       </section>
     );
   }
