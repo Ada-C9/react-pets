@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
+
 import Pet from './Pet';
 import NewPetForm from './NewPetForm';
 
 class PetCollection extends Component {
   static propTypes = {
-    data: PropTypes.array.isRequired
   };
 
-  constructor(props) {
+  constructor() {
     super();
 
     // Set state to the static data from props
     this.state = {
-      pets: props.data
+      pets: []
     };
+  }
+
+  componentDidMount() {
+    // TODO after lunch: get some pets
+    axios.get()
   }
 
   addPet = (pet) => {
