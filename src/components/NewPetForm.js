@@ -58,6 +58,7 @@ class NewPetForm extends Component {
             value={this.state.name}
             onChange={this.onFieldChange}
             type="text"
+            id="name"
             />
         </div>
         <div>
@@ -66,7 +67,9 @@ class NewPetForm extends Component {
             name="age"
             value={this.state.age}
             onChange={this.onFieldChange}
-            type="number" />
+            type="number"
+            id="age"
+            />
         </div>
         <div>
           <label htmlFor="breed">Breed: </label>
@@ -74,7 +77,9 @@ class NewPetForm extends Component {
             name="breed"
             value={this.state.breed}
             onChange={this.onFieldChange}
-            type="text" />
+            type="text"
+            id="breed"
+            />
         </div>
         <div>
           <label htmlFor="about">About: </label>
@@ -82,6 +87,7 @@ class NewPetForm extends Component {
             name="about"
             value={this.state.about}
             onChange={this.onFieldChange}
+            id="about"
             />
         </div>
         <input type="submit" value="Add Pet" />
