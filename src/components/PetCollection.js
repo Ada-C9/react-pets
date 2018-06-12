@@ -23,7 +23,7 @@ class PetCollection extends Component {
 
   componentDidMount() {
     this.props.updateStatusCallback('Loading pets...', 'success');
-    
+
     axios.get(PETS_URL)
       .then((response) => {
         console.log('Success!');
@@ -50,10 +50,19 @@ class PetCollection extends Component {
   }
 
   addPet = (pet) => {
-    let updatedPets = this.state.pets;
-    updatedPets.push(pet);
+    axios.post(PETS_URL, pet)
+      .then((response) => {
+        console.log(response);
+        this.props.updateStatusCallback(`Successfully added pet ${ pet.name }!`, 'success');
 
-    this.setState({ pets: updatedPets });
+        let updatedPets = this.state.pets;
+        updatedPets.push(pet);
+
+        this.setState({ pets: updatedPets });
+      })
+      .catch((error) => {
+        this.props.updateStatusCallback(`Error adding pet ${ pet.name }.`, 'error');
+      });
   }
 
   render() {
