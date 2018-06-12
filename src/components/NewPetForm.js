@@ -18,8 +18,15 @@ class NewPetForm extends Component {
   }
 
   onInputChange = (event) => {
+    const key = event.target.name;
+    let value = event.target.value;
+
+    if (key === 'breed') {
+      value = value.toUpperCase();
+    }
+
     let updatedInput = {};
-    updatedInput[event.target.name] = event.target.value;
+    updatedInput[key] = value;
     this.setState(updatedInput);
     // "name" : event.target.value
     // event.target.name
@@ -29,7 +36,7 @@ class NewPetForm extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
-    this.props.addPetCallback(this.state);
+    this.props.addPetCallback(this.state, 'fish');
 
     this.setState({
       name: '',
