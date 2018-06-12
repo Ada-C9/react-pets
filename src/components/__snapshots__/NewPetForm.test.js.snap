@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewPetForm that it matches an existing snapshot 1`] = `
+<NewPetForm
+  addPetCallback={[Function]}
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <h2>
+      Test header
+    </h2>
+    <div>
+      <label
+        htmlFor="name"
+      >
+        Name
+      </label>
+      <input
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="breed"
+      >
+        Breed
+      </label>
+      <input
+        name="breed"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="age"
+      >
+        Age
+      </label>
+      <input
+        name="age"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        htmlFor="about"
+      >
+        About
+      </label>
+      <input
+        name="about"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <input
+        type="submit"
+      />
+    </div>
+  </form>
+</NewPetForm>
+`;

@@ -42,6 +42,7 @@ class NewPetForm extends Component {
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
+        <h2>Test header</h2>
         <div>
           <label htmlFor="name">Name</label>
           <input type="text"
