@@ -100,6 +100,52 @@ describe('NewPetForm', () => {
     });
   });
 
+  test('NewPetForm can submit', () => {
+    // Arrange
+    // Shallow Mounted the wrapper
+
+    const mockAddPetCallback = jest.fn();
+
+    const wrapper = shallow(<NewPetForm
+      addPetCallback={ mockAddPetCallback }
+      />);
+
+      wrapper.find(`[name="name"]`).simulate('change', {
+        target: {
+          name: 'name',
+          value: 'bob',
+        },
+      });
+
+      // force textfields changed
+      wrapper.update();
+      wrapper.find(`[name="age"]`).simulate('change', {
+        target: {
+          name: 'age',
+          value: 14,
+        },
+      });
+
+      // force textfields changed
+      wrapper.update();
+
+      wrapper.find('form').simulate('submit', {
+        preventDefault: () => {},
+      });
+      wrapper.update();
+
+      const nameField = wrapper.find('[name="name"]');
+      expect(nameField.getElement().props.value).toEqual('');
+
+      expect(mockAddPetCallback).toHaveBeenCalled();
+      expect(mockAddPetCallback.mock.calls[0][0]).toEqual({
+        name: 'bob',
+        age: 14,
+        about: '',
+        breed: '',
+      });
+
+  });
 
 
 
