@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <Status
           message={this.state.status.message}
-          types={this.state.status.type}
+          type={this.state.status.type}
           />
         <PetCollection
           updateStatusCallback={this.updateStatus}

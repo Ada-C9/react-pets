@@ -7,9 +7,6 @@ exports[`NewPetForm that it matches an existing snapshot 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <h2>
-      Test header
-    </h2>
     <div>
       <label
         htmlFor="name"

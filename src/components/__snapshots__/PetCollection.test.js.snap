@@ -29,9 +29,6 @@ exports[`PetCollection deep mount 1`] = `
       <form
         onSubmit={[Function]}
       >
-        <h2>
-          Test header
-        </h2>
         <div>
           <label
             htmlFor="name"

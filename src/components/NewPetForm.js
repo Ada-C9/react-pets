@@ -54,7 +54,6 @@ class NewPetForm extends Component {
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
-        <h2>Test header</h2>
         {this.buildInput('name', 'Name')}
         {this.buildInput('breed', 'Breed')}
         {this.buildInput('age', 'Age')}

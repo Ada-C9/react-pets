@@ -5,7 +5,7 @@ import axios from 'axios';
 import Pet from './Pet';
 import NewPetForm from './NewPetForm';
 
-const PETS_URL = 'https://petdibs.herokuapp.com/pets';
+const PETS_URL = 'https://petdibs.herokuapp.com/petsbadurl';
 
 class PetCollection extends Component {
   static propTypes = {
