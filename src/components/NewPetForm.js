@@ -39,39 +39,28 @@ class NewPetForm extends Component {
     });
   }
 
+  buildInput(key, text) {
+    return (
+      <div>
+        <label htmlFor={key}>{text}</label>
+        <input type="text"
+          name={key}
+          value={this.state[key]}
+          onChange={this.onInputChange}/>
+      </div>
+    );
+  }
+
   render() {
     return (
       <form onSubmit={this.onFormSubmit}>
         <h2>Test header</h2>
+        {this.buildInput('name', 'Name')}
+        {this.buildInput('breed', 'Breed')}
+        {this.buildInput('age', 'Age')}
+        {this.buildInput('about', 'About')}
         <div>
-          <label htmlFor="name">Name</label>
-          <input type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.onInputChange}/>
-        </div>
-        <div>
-          <label htmlFor="breed">Breed</label>
-          <input type="text"
-            name="breed"
-            value={this.state.breed}
-            onChange={this.onInputChange}/>
-        </div>
-        <div>
-          <label htmlFor="age">Age</label>
-          <input type="text"
-            name="age"
-            value={this.state.age}
-            onChange={this.onInputChange}/>
-        </div>
-        <div>
-          <label htmlFor="about">About</label>
-          <input type="text"
-            name="about"
-            value={this.state.about}
-            onChange={this.onInputChange}/>
-        </div>
-        <div><input type="submit"/>
+          <input type="submit"/>
         </div>
       </form>
     );

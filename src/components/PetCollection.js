@@ -36,8 +36,8 @@ class PetCollection extends Component {
         this.setState({ pets: pets });
       })
       .catch((error) => {
-        console.log('Error :(');
-        console.log(error);
+        // console.log('Error :(');
+        // console.log(error);
 
         // Get something on the screen so the user knows
         this.props.updateStatusCallback(error.message, 'error');
