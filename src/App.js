@@ -24,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className="foo">Hello, World</h1>
         <PetCollection />
       </div>
     );

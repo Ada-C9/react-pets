@@ -42,8 +42,10 @@ class NewPetForm extends Component {
   };
 
   render() {
+    let foo = 42;
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form
+        onSubmit={this.onFormSubmit}>
         <div>
           <label htmlFor="name">Name: </label>
           <input
