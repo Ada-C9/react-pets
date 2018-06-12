@@ -50,7 +50,7 @@ class NewPetForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form onSubmit={this.onFormSubmit} >
         <div>
           <label htmlFor="name">Name: </label>
           <input
