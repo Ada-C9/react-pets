@@ -5,24 +5,29 @@ exports[`PetCollection deep mount 1`] = `
   updateStatusCallback={[Function]}
 >
   <section>
-    <table>
-      <tbody>
-        <tr>
-          <th>
-            Name
-          </th>
-          <th>
-            Breed
-          </th>
-          <th>
-            Age
-          </th>
-          <th>
-            About
-          </th>
-        </tr>
-      </tbody>
-    </table>
+    <PetTable
+      pets={Array []}
+    >
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Breed
+            </th>
+            <th>
+              Age
+            </th>
+            <th>
+              About
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </PetTable>
     <NewPetForm
       addPetCallback={[Function]}
     >
@@ -94,24 +99,9 @@ exports[`PetCollection deep mount 1`] = `
 
 exports[`PetCollection shallow mount 1`] = `
 <section>
-  <table>
-    <tbody>
-      <tr>
-        <th>
-          Name
-        </th>
-        <th>
-          Breed
-        </th>
-        <th>
-          Age
-        </th>
-        <th>
-          About
-        </th>
-      </tr>
-    </tbody>
-  </table>
+  <PetTable
+    pets={Array []}
+  />
   <NewPetForm
     addPetCallback={[Function]}
   />

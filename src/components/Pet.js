@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Pet extends Component {
-  // could have each field come in individually
-  // could have a single object that contains each field
+const Pet = (props) => {
 
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    breed: PropTypes.string.isRequired,
-    age: PropTypes.number,
-    about: PropTypes.string
-  };
-
-  render() {
-    return (
-      <tr>
-        <td>{this.props.name}</td>
-        <td>{this.props.breed}</td>
-        <td>{this.props.age}</td>
-        <td>{this.props.about}</td>
-      </tr>
-    );
-  }
+  return (
+    <tr>
+      <td>{props.name}</td>
+      <td>{props.breed}</td>
+      <td>{props.age}</td>
+      <td>{props.about}</td>
+    </tr>
+  );
 }
+
+Pet.propTypes = {
+  name: PropTypes.string.isRequired,
+  breed: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  about: PropTypes.string
+};
 
 export default Pet;

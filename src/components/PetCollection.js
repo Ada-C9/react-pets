@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-import Pet from './Pet';
 import NewPetForm from './NewPetForm';
+import PetTable from './PetTable';
 
-const PETS_URL = 'https://petdibs.herokuapp.com/petsbadurl';
+const PETS_URL = 'https://petdibs.herokuapp.com/pets';
 
 class PetCollection extends Component {
   static propTypes = {
@@ -66,27 +66,11 @@ class PetCollection extends Component {
   }
 
   render() {
-    const pets = this.state.pets.map((pet, index) => {
-      return <Pet key={index}
-        name={pet.name}
-        breed={pet.breed}
-        age={pet.age}
-        about={pet.about} />
-    });
+
 
     return (
       <section>
-        <table>
-          <tbody>
-            <tr>
-              <th>Name</th>
-              <th>Breed</th>
-              <th>Age</th>
-              <th>About</th>
-            </tr>
-            { pets }
-          </tbody>
-        </table>
+        <PetTable pets={this.state.pets} />
 
         <NewPetForm addPetCallback={this.addPet}/>
       </section>
