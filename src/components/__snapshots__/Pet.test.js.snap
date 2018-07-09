@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pet that is matches an existing snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Pet
+    about="cute!"
+    age={23}
+    breed="Pomeranian"
+    name="Pete"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Pet 
+          Pete
+</h3>,
+        <p>
+          <strong>
+                    Age: 
+          </strong>
+          23
+</p>,
+        <p>
+          <strong>
+                    Breed: 
+          </strong>
+          Pomeranian
+</p>,
+        <p>
+          cute!
+</p>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Pet ",
+            "Pete",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Pet ",
+          "Pete",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <strong>
+              Age: 
+</strong>,
+            23,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Age: ",
+            },
+            "ref": null,
+            "rendered": "Age: ",
+            "type": "strong",
+          },
+          23,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <strong>
+              Breed: 
+</strong>,
+            "Pomeranian",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Breed: ",
+            },
+            "ref": null,
+            "rendered": "Breed: ",
+            "type": "strong",
+          },
+          "Pomeranian",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "cute!",
+        },
+        "ref": null,
+        "rendered": "cute!",
+        "type": "p",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Pet 
+            Pete
+</h3>,
+          <p>
+            <strong>
+                        Age: 
+            </strong>
+            23
+</p>,
+          <p>
+            <strong>
+                        Breed: 
+            </strong>
+            Pomeranian
+</p>,
+          <p>
+            cute!
+</p>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Pet ",
+              "Pete",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Pet ",
+            "Pete",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <strong>
+                Age: 
+</strong>,
+              23,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Age: ",
+              },
+              "ref": null,
+              "rendered": "Age: ",
+              "type": "strong",
+            },
+            23,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <strong>
+                Breed: 
+</strong>,
+              "Pomeranian",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Breed: ",
+              },
+              "ref": null,
+              "rendered": "Breed: ",
+              "type": "strong",
+            },
+            "Pomeranian",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "cute!",
+          },
+          "ref": null,
+          "rendered": "cute!",
+          "type": "p",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
